@@ -1,3 +1,4 @@
+// terminale "npm run dev" yazıp ekranı açarız.
 console.log("Merhaba Kodlama.io")
 
 //JS TypeSafe bir yazılım dili değildir.
