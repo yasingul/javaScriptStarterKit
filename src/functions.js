@@ -59,3 +59,44 @@ let products =
 ]
 
 addToCart3(products)
+
+function add(number1, number2){
+    console.log(number1 + number2)
+}
+
+add(20, 30)
+//rest, rest operatörüyle birlikte bir şey kullanacaksak rest'i en sona yaz.
+function add2(...numbers){ 
+    let total = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        total = total + numbers[i]
+    }
+    console.log(total)
+}
+
+add2(50, 60, 70, 150)
+
+let numbers = [30,40,15,2548,124,231,45648,1231]
+console.log(Math.max(...numbers)) //Math.max verilen sayılardan en büyüğünü verir. "..." ayır anlamına gelir.
+
+let [icAnadolu, marmara, karadeniz,[icAnadoluSehirleri]] = [
+    {name: "İç Anadolu", population:"20M"}, 
+    {name: "Marmara", population:"30M"},
+    {name:"Karadeniz", pupolation:"15M"},
+    [
+        ["Ankara", "Konya"],
+        ["İstanbul", "Balıkesir"],
+        ["Sinop", "Trabzon"],
+    ]
+]
+
+console.log(icAnadolu.population)
+console.log(marmara.name)
+console.log(icAnadoluSehirleri)
+//let keyword'ünü kullanırken fonksiyon olarak algılayacağı için obje olarak algılaması için yazdığımız kodu () içine alırız. 
+let newProductName, newUnitPrice, newQuantity
+({productName:newProductName, unitPrice:newUnitPrice, quantity:newQuantity} = 
+{productName:"Armut", unitPrice:5, quantity:10})
+console.log(newProductName)
+console.log(newUnitPrice)
+console.log(newQuantity)
